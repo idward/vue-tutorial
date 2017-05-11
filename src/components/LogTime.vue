@@ -7,7 +7,7 @@
       </div>
       <div class="col-sm-6">
         <label for="time">时间</label>
-        <input type="number" class="form-control" v-model="totalTime" placeholder="Hours">
+        <input type="number" min="1" max="10" class="form-control" v-model="totalTime" placeholder="Hours">
       </div>
     </div>
     <div class="form-group">

@@ -35,7 +35,7 @@
             </div>
             <div class="col-sm-1">
               <button class="btn btn-danger btn-xs delete-button"
-                      @click="deletePlan(index)">X
+                      @click="deletePlan(index,plan.totalTime)">X
               </button>
             </div>
           </div>
@@ -54,9 +54,10 @@
       }
     },
     methods: {
-      deletePlan(idx) {
-        console.log(idx);
-        return this.$store.state.list.splice(idx, 1);
+      deletePlan(idx, time) {
+          debugger;
+        this.$store.dispatch('deletePlan', idx);
+        this.$store.dispatch('decTotalTime', time);
       }
     }
   }
