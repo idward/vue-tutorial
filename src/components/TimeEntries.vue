@@ -15,7 +15,7 @@
         <a class="list-group-item" v-for="(plan,index) in plans">
           <div class="row">
             <div class="col-sm-2 user-details">
-              <img :src="plat.avatar" class="avatar img-circle img-responsive" alt="">
+              <img :src="plan.avatar" class="avatar img-circle img-responsive" alt="">
               <p class="text-center">
                 <strong>{{plan.name}}</strong>
               </p>
@@ -49,14 +49,15 @@
   export default {
     name: 'TimeEntries',
     computed: {
-        plans() {
-
-        }
+      plans() {
+        return this.$store.state.list;
+      }
     },
     methods: {
-        deletePlan(idx) {
-
-        }
+      deletePlan(idx) {
+        console.log(idx);
+        return this.$store.state.list.splice(idx, 1);
+      }
     }
   }
 </script>

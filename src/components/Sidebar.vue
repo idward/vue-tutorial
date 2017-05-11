@@ -16,8 +16,7 @@
     //计算属性
     computed: {
       time(){
-          return '';
-//        return this.$store.state.totalTime;
+        return this.$store.state.totalTime;
       }
     }
   }

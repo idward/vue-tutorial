@@ -6,6 +6,7 @@ import VueResource from 'vue-resource';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import router from './router';
+import store from './store';
 
 Vue.use(VueResource);
 
@@ -15,6 +16,7 @@ Vue.config.productionTip = false;
 var vm = new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
   // render: h => h(App)
